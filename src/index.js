@@ -1,6 +1,12 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 
+const exercises = {
+    one: 10,
+    two: 7,
+    three: 14
+}
+
 const Header = (props) => {
 
     return (
@@ -21,26 +27,20 @@ const Content = () =>{
     const part1 = 'Fundamentals of React';
     const part2 = 'Using props to pass data';
     const part3 = 'State of a component';
-    const exercises1 = 10;
-    const exercises2 = 7;
-    const exercises3 = 14;
 
     return(
     <div>
-        <Part part={part1} exercies={exercises1}/>
-        <Part part={part2} exercies={exercises2}/>
-        <Part part={part3} exercies={exercises3}/>
+        <Part part={part1} exercies={exercises.one}/>
+        <Part part={part2} exercies={exercises.two}/>
+        <Part part={part3} exercies={exercises.three}/>
     </div>
     )
 }
 
 const Total = () =>{
-    const exercises1 = 10;
-    const exercises2 = 7;
-    const exercises3 = 14;
 
     return (
-    <strong><p>Number of exercises { exercises1 + exercises2 + exercises3}</p></strong>
+    <strong><p>Number of exercises { exercises.one + exercises.two + exercises.three}</p></strong>
  )
 }
 
